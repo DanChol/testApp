@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mining_apps"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="Mining Apps"/>
+    <item
+        android:id="@+id/airdrops"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="Airdrops"/>
+    <item
+        android:id="@+id/about_app"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="About app"/>
+</menu>

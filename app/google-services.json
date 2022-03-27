@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195616782994",
+    "project_id": "botttomtest2",
+    "storage_bucket": "botttomtest2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195616782994:android:ee776aea1a9105cedfc44b",
+        "android_client_info": {
+          "package_name": "kg.unicapp.botttomtest2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195616782994-ipak7s7nfqujchd0jhqpebv1k00ipk81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkZddhcpD-0vn3kNEJsEYJ2HXflcyZoVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195616782994-ipak7s7nfqujchd0jhqpebv1k00ipk81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

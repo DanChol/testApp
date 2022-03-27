@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/airdropFragment">
+
+    <fragment
+        android:id="@+id/airdropFragment"
+        android:name="kg.unicapp.botttomtest2.airdrops.AirdropFragment"
+        android:label="fragment_airdrop"
+        tools:layout="@layout/fragment_airdrop" />
+    <fragment
+        android:id="@+id/miningFragment"
+        android:name="kg.unicapp.botttomtest2.MiningFragment"
+        android:label="fragment_mining"
+        tools:layout="@layout/fragment_mining" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="kg.unicapp.botttomtest2.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>
