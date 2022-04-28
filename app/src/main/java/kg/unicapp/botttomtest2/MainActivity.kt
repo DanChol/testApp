@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import kg.unicapp.botttomtest2.airdrops.AirdropFragment
+import kg.unicapp.botttomtest2.databinding.ActivityMainBinding
+import kg.unicapp.botttomtest2.InfoFragment
 import kg.unicapp.botttomtest2.miningapps.MiningFragment
 
 class MainActivity : AppCompatActivity() {
@@ -13,27 +15,40 @@ class MainActivity : AppCompatActivity() {
     private lateinit var currentFragment: Fragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().replace(R.id.nav_container, AirdropFragment()).commit()
-        val bNav: NavigationBarView = findViewById(R.id.bNav)
-        bNav.setOnItemSelectedListener(navListener)
-    }
-
-    val navListener = NavigationBarView.OnItemSelectedListener{
-        when(it.itemId){
-            R.id.mining_apps -> {
-                currentFragment = MiningFragment()
-            }
-            R.id.airdrops -> {
-                currentFragment = AirdropFragment()
-            }
-            R.id.about_app -> {
-                currentFragment = InfoFragment()
-            }
+        binding.bNav.setOnNavigationItemSelectedListener {
+            handleBottomNavigation(
+                it.itemId
+            )
         }
-        true
+        binding.bNav.selectedItemId = R.id.airdrops
+    }
+    private fun handleBottomNavigation(
+        menuItemId: Int
+    ): Boolean = when (menuItemId) {
+        R.id.airdrops ->  {
+            swapFragments(AirdropFragment())
+            true
+        }
 
+        R.id.mining_apps -> {
+            swapFragments(MiningFragment())
+            true
+        }
+
+        R.id.about_app -> {
+            swapFragments(InfoFragment())
+            true
+        }
+        else -> false
     }
 
+    private fun swapFragments(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_container, fragment)
+            .commit()
+    }
 }
+
